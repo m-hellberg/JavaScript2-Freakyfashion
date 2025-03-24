@@ -1,0 +1,14 @@
+.wishlist-icon {
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.wishlist-icon.filled {
+  color: red; /* Färgen blir röd när hjärtat är ifyllt */
+}
+
+.wishlist-icon:hover {
+  color: red; /* Ändra färg på hover, men endast om det inte är ifyllt */
+}

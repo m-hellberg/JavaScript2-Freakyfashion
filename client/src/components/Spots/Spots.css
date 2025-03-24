@@ -1,0 +1,53 @@
+.spots {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .spots {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px 8%;
+    }
+    
+    .spot {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+    
+    .spot img {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+    
+    .spot-content {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+        color: white;
+        text-align: center;
+    }
+    
+    .spot h2 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .spot-btn {
+        background-color: #22a186;
+        color: white;
+        padding: 10px 20px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    
+    .spot-btn:hover {
+        background-color: #000000;
+    }
+}

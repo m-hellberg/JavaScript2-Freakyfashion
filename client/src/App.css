@@ -1,0 +1,6 @@
+/* Här kan jag lägga allmän styling för <main>-taggen
+ eller annat som påverkar hela appen. */
+
+main {
+  flex: 1; /* Låter main ta upp allt tillgängligt utrymme */
+}

@@ -1,0 +1,195 @@
+/* Standard för mobilskärmar (<640px) */
+.header {
+  max-width: 100%;
+  background-color: #00745b15;
+  color: white;
+  padding: 10px 20px;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: column; /* Stapla logga, sökfält och ikoner */
+  align-items: center;
+  text-align: center;
+  gap: 10px; /* Mellanrum mellan elementen */
+}
+
+.logo img {
+  height: auto; /* Mindre storlek för mobil */
+  width: 60%;
+}
+
+/* Skapa en wrapper för sökfält + ikoner */
+.search-icons-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%; /* Använd hela bredden */
+  max-width: 100%; /* Justera för bättre responsivitet */
+  gap: 10px; /* Mellanrum mellan sökfält och ikoner */
+}
+
+.search-bar {
+  flex: 3;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px; /* Justera för att passa din layout */
+  color: #aaa; /* Grå färg för ikonen */
+  font-size: 20px; /* Storleken på ikonen */
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  padding-left: 35px;
+}
+
+.search-bar input:focus {
+  border-color: #22a186;
+  outline: none;
+}
+
+.icons {
+  display: flex;
+  gap: 10px;
+  flex: 1; /* 20% av utrymmet */
+  justify-content: flex-end; /* Placera ikonerna längst till höger */
+}
+
+.icon {
+  font-size: 1.8rem; /* Större ikoner för bättre klickbarhet */
+  cursor: pointer;
+  color: black;
+}
+
+/* 🏷 Menyn för mobil */
+.menu {
+  margin: 20px 0;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: column; /* Stapla menyval på mobil */
+  align-items: left;
+  gap: 10px;
+  padding: 0;
+}
+
+.menu li {
+  list-style: none;
+}
+
+.menu a {
+  color: rgb(37, 37, 37);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem; /* Gör menyn lättläst */
+}
+
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #22a186;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.active-link {
+  background-color: #ffffff;
+  padding: 5px 0;
+}
+
+/* 🌍 För större skärmar (≥640px, t.ex. surfplattor) */
+@media (min-width: 640px) {
+  .header {
+    padding: 0;
+    padding-bottom: 0;
+  }
+
+  .header-top {
+    display: flex;
+    flex-direction: row; /* Placera logga, sökfält och ikoner i rad */
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Litet mellanrum mellan elementen */
+    padding: 10px 20px;
+  }
+
+  .logo {
+    flex-shrink: 0; /* Förhindrar att loggan ändrar storlek */
+  }
+
+  .logo img {
+    height: auto; /* Mindre storlek för mobil */
+    width: 200px;
+  }
+
+  .search-icons-wrapper {
+    display: flex;
+    margin-top: 45px;
+  }
+
+  .search-bar {
+    margin-left: 20px; /* Skapar avstånd från logotypen */
+  }
+
+  .search-bar input {
+    display: flex;
+    width: 300px;
+  }
+
+  .icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .menu {
+    margin: 0;
+  }
+
+  .menu ul {
+    flex-direction: row; /* Visa menyval i rad */
+    justify-content: left;
+    background-color: rgb(48, 48, 48);
+    padding: 10px;
+    gap: 20px;
+  }
+
+  .menu a {
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+  }
+
+  .active-link {
+    background-color: #22a186;
+    border-bottom: 1px solid #22a186;
+  }
+}
+
+/* 💻 För ännu större skärmar (≥1024px, t.ex. laptops & desktops) */
+@media (min-width: 1024px) {
+  .menu a {
+    font-size: 1.1rem; /* Gör menyn något större */
+    padding: 10px 20px;
+  }
+}

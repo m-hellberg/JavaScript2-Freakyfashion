@@ -1,0 +1,26 @@
+.basket-title {
+  padding: 30px;
+  justify-self: center;
+}
+
+/* Styling för knappen "Till kassan" */
+.to-checkout-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.to-checkout-button {
+  background-color: #22a186;
+  color: white;
+  padding: 10px 20px;
+  width: 200px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.to-checkout-button:hover {
+  background-color: #000000;
+}
