@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import NewBadge from "../../components/NewBadge/NewBadge";
+import WishlistIcon from "../../components/WishlistIcon/WishlistIcon";
 
 const AllProducts = () => {
   const [products, setProducts] = useState([]);
@@ -17,6 +19,7 @@ const AllProducts = () => {
         {products.length > 0 ? (
           products.map((product) => (
             <div key={product.id} className="product-card">
+              {product.isNew === 1 && <NewBadge />}
               <div className="image-container">
                 <Link to={`/products/${product.slug}`}>
                   <img
@@ -25,6 +28,7 @@ const AllProducts = () => {
                     className="product-image"
                   />
                 </Link>
+                <WishlistIcon />
               </div>
               <p className="product-name">{product.name}</p>
               <p className="product-brand">{product.brand}</p>
