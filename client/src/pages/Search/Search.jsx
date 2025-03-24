@@ -6,9 +6,6 @@ import WishlistIcon from "../../components/WishlistIcon/WishlistIcon";
 
 const Search = () => {
   const [results, setResults] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const query = searchParams.get("q");
@@ -18,24 +15,13 @@ const Search = () => {
 
     fetch(`http://localhost:8000/api/search?q=${query}`)
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Kunde inte hämta produkter");
-        }
+        if (!response.ok) return [];
         return response.json();
       })
       .then((data) => {
         setResults(data);
-      })
-      .catch((err) => {
-        setError(err.message);
-      })
-      .finally(() => {
-        setLoading(false);
       });
   }, [query]);
-
-  if (loading) return <p>Laddar sökresultat...</p>;
-  if (error) return <p>{error}</p>;
 
   return (
     <section className="search-results-page">
