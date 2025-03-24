@@ -22,7 +22,7 @@ const ProductDetails = () => {
     fetch(`http://localhost:8000/api/products/${slug}`)
       .then((response) => {
         if (!response.ok) {
-          throw new Error("Produkten hittades inte");
+          throw new Error("Tyvärr, denna produkt verkar inte finnas.");
         }
         return response.json();
       })
@@ -77,7 +77,7 @@ const ProductDetails = () => {
   );
 
   const sliderSettings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
