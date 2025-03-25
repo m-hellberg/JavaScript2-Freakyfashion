@@ -1,11 +1,11 @@
 import "./Hero.css";
 
-const Hero = () => {
+const Hero = ({ title, description }) => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <h1>Freaktown Collection</h1>
-        <p>Upptäck vår senaste kollektion.</p>
+        <h1>{title}</h1>
+        <p>{description}</p>
         <a href="#" className="hero-btn">
           SHOPPA NU
         </a>

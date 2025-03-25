@@ -5,7 +5,10 @@ import ProductGrid from "../../components/ProductGrid/ProductGrid";
 const Home = () => {
   return (
     <div>
-      <Hero />
+      <Hero
+        title="Freaktown Collection"
+        description="Upptäck vår senaste kollektion."
+      />
       <Spots />
       <ProductGrid />
     </div>
